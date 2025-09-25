@@ -1,37 +1,72 @@
-body{
+/* Global styles */
+body {
     margin: 0px;
     background-color: rgb(247, 105, 53);
 }
-.heading{
+
+.heading {
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
-    position: relative;
     background-color: rgb(244, 223, 153);
     margin: 0px;
-    padding: 0%;
+    padding: 0;
     width: 100%;
     height: 70px;
-    border-radius:0px 0px 25px 25px;
-
-
+    border-radius: 0px 0px 25px 25px;
 }
-.heading p{
+
+.heading p {
     font-size: 45px;
-    font-family:Agbalumo ;
-    color:chocolate;
+    font-family: 'Agbalumo', sans-serif;
+    color: chocolate;
 }
-.heading img{
+
+.heading img {
     width: 45px;
     height: 45px;
 }
-.fr1{
+
+.fr1 {
     margin: 25px;
     width: 95%;
     height: 500px;
     background-color: bisque;
     border-radius: 12%;
     border: 2.5px solid;
-    
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .heading p {
+        font-size: 30px; /* Smaller font size on mobile */
+    }
+
+    .heading img {
+        width: 35px; /* Adjust image size for mobile */
+        height: 35px;
+    }
+
+    .fr1 {
+        width: 90%; /* Slightly smaller container */
+        height: 400px; /* Adjust height for mobile */
+    }
+}
+
+/* Very small screen responsiveness (for phones like iPhone SE or similar) */
+@media screen and (max-width: 480px) {
+    .heading p {
+        font-size: 24px; /* Even smaller font size for very small screens */
+    }
+
+    .heading img {
+        width: 30px; /* Further adjust image size */
+        height: 30px;
+    }
+
+    .fr1 {
+        width: 95%;
+        height: 350px; /* Adjust height further for smaller screens */
+    }
 }
