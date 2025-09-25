@@ -49,6 +49,7 @@ body {
     }
 
     .fr1 {
+        margin:0px;
         width: 90%; /* Slightly smaller container */
         height: 400px; /* Adjust height for mobile */
     }
