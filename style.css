@@ -54,7 +54,7 @@ body {
 
     .fr1 {
         margin: 20px auto; /* Center with margin */
-        width: 90%; /* Slightly smaller container */
+        width: 88%; /* Slightly smaller container */
         height: 400px; /* Adjust height for mobile */
         padding: 20px; /* Add some padding for better visual spacing */
     }
