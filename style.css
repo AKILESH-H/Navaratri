@@ -29,12 +29,16 @@ body {
 }
 
 .fr1 {
-    margin: 25px;
+    margin: 25px auto; /* Center the container horizontally */
     width: 95%;
+    max-width: 1000px; /* Add a max-width to avoid it becoming too large */
     height: 500px;
     background-color: bisque;
     border-radius: 12%;
     border: 2.5px solid;
+    display: flex; /* Flexbox to handle alignment */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Mobile responsiveness */
@@ -49,9 +53,10 @@ body {
     }
 
     .fr1 {
-        margin:20px 10px;
+        margin: 20px auto; /* Center with margin */
         width: 90%; /* Slightly smaller container */
         height: 400px; /* Adjust height for mobile */
+        padding: 20px; /* Add some padding for better visual spacing */
     }
 }
 
@@ -67,7 +72,9 @@ body {
     }
 
     .fr1 {
+        margin: 15px auto; /* Less margin on very small screens */
         width: 95%;
         height: 350px; /* Adjust height further for smaller screens */
+        padding: 15px; /* Slightly reduced padding */
     }
 }
