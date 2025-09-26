@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="heading">
         <img src="vilak.png" alt="">
@@ -17,24 +16,9 @@
         <img src="vilak.png" alt="">
     </div>
 
-    <!-- Video container -->
-    <div class="video-container">
-        <video id="video" class="video" autoplay>
-            <source src="video.mp4" type="video/mp4">   
-        </video>
-
-        <!-- Custom Controls -->
-        <div class="controls">
-            <button id="playPauseBtn" class="control-btn">Play</button>
-            <input type="range" id="progressBar" class="progress-bar" value="0">
-            <button id="fullscreenBtn" class="control-btn">Fullscreen</button>
-        </div>
-    </div>
-
-    <div id="landscape-prompt" class="landscape-prompt">
-        <p>Please rotate your device to landscape mode for a better experience.</p>
-    </div>
-
-    <script src="script.js"></script>
+    <!-- Video now occupies full screen -->
+    <video class="video" controls autoplay>
+        <source src="video.mp4" type="video/mp4">
+    </video>
 </body>
 </html>
