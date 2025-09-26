@@ -31,14 +31,21 @@ body {
 .fr1 {
     margin: 25px auto; /* Center the container horizontally */
     width: 95%;
-    max-width: 1000px; /* Add a max-width to avoid it becoming too large */
-    height: 500px;
+    max-width: 1500px; /* Add a max-width to avoid it becoming too large */
+    height: 615px;
     background-color: bisque;
-    border-radius: 12%;
     border: 2.5px solid;
     display: flex; /* Flexbox to handle alignment */
     justify-content: center;
     align-items: center;
+}
+
+/* Video styling */
+.video {
+    width: 100%;   /* Make the video width take up the full container */
+    height: 100%;  /* Make the video height adjust automatically */
+    object-fit: contain;  /* Ensure the video fits entirely within the container without cropping */
+    background-color: #fff; /* Optional: Set a background color for empty space (if any) */
 }
 
 /* Mobile responsiveness */
