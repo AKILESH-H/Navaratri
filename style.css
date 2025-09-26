@@ -2,9 +2,11 @@
 body {
     margin: 0;
     background-color: rgb(247, 105, 53);
-    overflow: hidden; /* Prevent scrolling */
+    overflow: auto; /* Allow scrolling */
+    height: 100%; /* Ensure the body takes full height */
 }
 
+/* Heading styles */
 .heading {
     display: flex;
     position: absolute; /* Absolute positioning to make it stay at the top */
@@ -22,7 +24,7 @@ body {
 .heading p {
     font-size: 45px;
     font-family: 'Agbalumo', sans-serif;
-    color: rgb(255, 126, 33);
+    color: chocolate;
 }
 
 .heading img {
@@ -30,13 +32,36 @@ body {
     height: 45px;
 }
 
-.video {
-    width: 100vw;  /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    object-fit: cover;  /* Ensure the video covers the entire screen */
+/* Message for landscape orientation */
+.landscape-message {
+    display: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    z-index: 20; /* Above the video */
+    text-align: center;
+}
+
+/* Video container styles */
+.video-container {
+    margin-top: 10px; /* Space between heading and video */
+    width: 100%;
+    height: auto; /* Let it adjust based on video size */
+}
+
+/* Video styles */
+.video {
+    width: 100%;
+    height: 700px; /* Let the video size be adjusted to its container */
+    
+    object-fit: contain; /* Scale video inside container without clipping */
+
 }
 
 /* Mobile responsiveness */
@@ -49,6 +74,11 @@ body {
         width: 35px;
         height: 35px;
     }
+
+    /* Adjust landscape message text size */
+    .landscape-message p {
+        font-size: 18px;
+    }
 }
 
 /* Very small screen responsiveness */
@@ -60,5 +90,10 @@ body {
     .heading img {
         width: 30px;
         height: 30px;
+    }
+
+    /* Adjust landscape message text size */
+    .landscape-message p {
+        font-size: 16px;
     }
 }
