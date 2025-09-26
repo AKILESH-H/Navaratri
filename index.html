@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navaratri</title>
-    <link rel="stylesheet" href="s2.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
@@ -18,17 +17,24 @@
         <img src="vilak.png" alt="">
     </div>
 
-    <!-- Full-screen video -->
-    <video class="video" controls autoplay>
-        <source src="video.mp4" type="video/mp4">
-    </video>
+    <!-- Video container -->
+    <div class="video-container">
+        <video id="video" class="video" autoplay>
+            <source src="video.mp4" type="video/mp4">   
+        </video>
 
-    <!-- Landscape prompt -->
+        <!-- Custom Controls -->
+        <div class="controls">
+            <button id="playPauseBtn" class="control-btn">Play</button>
+            <input type="range" id="progressBar" class="progress-bar" value="0">
+            <button id="fullscreenBtn" class="control-btn">Fullscreen</button>
+        </div>
+    </div>
+
     <div id="landscape-prompt" class="landscape-prompt">
         <p>Please rotate your device to landscape mode for a better experience.</p>
     </div>
 
-    <script src="s3.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

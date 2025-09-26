@@ -33,11 +33,49 @@ body {
 }
 
 /* Full-screen video styling */
+.video-container {
+    position: relative;
+    width: 100vw;  /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+}
+
 .video {
-    width: 100vw;   /* Full width of the viewport */
-    height: 100vh;  /* Full height of the viewport */
-    object-fit: cover;  /* Ensure the video covers the whole area */
-    background-color: #000; /* Optional: black background if video does not fully fill */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Custom controls styling */
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.control-btn {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.control-btn:hover {
+    background-color: #666;
+}
+
+.progress-bar {
+    width: 200px;
 }
 
 /* Landscape prompt styling */
@@ -52,43 +90,26 @@ body {
     border-radius: 10px;
     text-align: center;
     display: none; /* Hidden by default */
-    z-index: 9999; /* Ensure it's on top */
+    z-index: 9999;
 }
 
 .landscape-prompt p {
     font-size: 24px;
 }
 
-/* Mobile responsiveness */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     .heading p {
-        font-size: 30px; /* Smaller font size on mobile */
+        font-size: 30px;
     }
 
     .heading img {
-        width: 35px; /* Adjust image size for mobile */
+        width: 35px;
         height: 35px;
     }
 
-    .video {
-        width: 100vw;   /* Full width of the viewport */
-        height: 100vh;  /* Full height of the viewport */
-    }
-}
-
-/* Very small screen responsiveness */
-@media screen and (max-width: 480px) {
-    .heading p {
-        font-size: 24px; /* Even smaller font size for very small screens */
-    }
-
-    .heading img {
-        width: 30px; /* Further adjust image size */
-        height: 30px;
-    }
-
-    .video {
-        width: 100vw;   /* Full width of the viewport */
-        height: 100vh;  /* Full height of the viewport */
+    .video-container {
+        width: 100%;
+        height: 100%;
     }
 }
