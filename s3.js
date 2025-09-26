@@ -1,43 +1,16 @@
-// Get the video element
-const video = document.getElementById('video');
-
-// Get the custom control buttons
-const playPauseBtn = document.getElementById('playPauseBtn');
-const progressBar = document.getElementById('progressBar');
-const fullscreenBtn = document.getElementById('fullscreenBtn');
-
-// Play/Pause Button
-playPauseBtn.addEventListener('click', () => {
-    if (video.paused) {
-        video.play();
-        playPauseBtn.textContent = 'Pause';
+// Function to check the orientation and display the message
+function checkOrientation() {
+    if (window.innerHeight > window.innerWidth) {
+        document.getElementById("landscape-message").style.display = "block"; // Show the message in portrait
     } else {
-        video.pause();
-        playPauseBtn.textContent = 'Play';
+        document.getElementById("landscape-message").style.display = "none"; // Hide the message in landscape
     }
+}
+
+// Event listener to detect when orientation changes
+window.addEventListener("orientationchange", function() {
+    checkOrientation();
 });
 
-// Progress Bar (Updates while playing)
-video.addEventListener('timeupdate', () => {
-    const progress = (video.currentTime / video.duration) * 100;
-    progressBar.value = progress;
-});
-
-// Seek video using the progress bar
-progressBar.addEventListener('input', () => {
-    const seekTime = (progressBar.value / 100) * video.duration;
-    video.currentTime = seekTime;
-});
-
-// Fullscreen Button
-fullscreenBtn.addEventListener('click', () => {
-    if (video.requestFullscreen) {
-        video.requestFullscreen();
-    } else if (video.mozRequestFullScreen) { // Firefox
-        video.mozRequestFullScreen();
-    } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
-        video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) { // IE/Edge
-        video.msRequestFullscreen();
-    }
-});
+// Run on initial load to check current orientation
+checkOrientation();
