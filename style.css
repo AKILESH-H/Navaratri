@@ -2,8 +2,10 @@
 body {
     margin: 0px;
     background-color: rgb(247, 105, 53);
+    overflow: hidden;  /* Hide overflow to prevent scrolling */
 }
 
+/* Heading style */
 .heading {
     display: flex;
     position: relative;
@@ -17,35 +19,25 @@ body {
     border-radius: 0px 0px 25px 25px;
 }
 
+/* Heading text */
 .heading p {
     font-size: 45px;
     font-family: 'Agbalumo', sans-serif;
     color: chocolate;
 }
 
+/* Heading image */
 .heading img {
     width: 45px;
     height: 45px;
 }
 
-.fr1 {
-    margin: 25px auto; /* Center the container horizontally */
-    width: 95%;
-    max-width: 1500px; /* Add a max-width to avoid it becoming too large */
-    height: 615px;
-    background-color: bisque;
-    border: 2.5px solid;
-    display: flex; /* Flexbox to handle alignment */
-    justify-content: center;
-    align-items: center;
-}
-
-/* Video styling */
+/* Full-screen video styling */
 .video {
-    width: 100%;   /* Make the video width take up the full container */
-    height: 100%;  /* Make the video height adjust automatically */
-    object-fit: contain;  /* Ensure the video fits entirely within the container without cropping */
-    background-color: #fff; /* Optional: Set a background color for empty space (if any) */
+    width: 100vw;   /* Full width of the viewport */
+    height: 100vh;  /* Full height of the viewport */
+    object-fit: cover;  /* Ensure the video covers the whole area */
+    background-color: #000; /* Optional: black background if video does not fully fill */
 }
 
 /* Mobile responsiveness */
@@ -59,15 +51,13 @@ body {
         height: 35px;
     }
 
-    .fr1 {
-        margin: 20px auto; /* Center with margin */
-        width: 88%; /* Slightly smaller container */
-        height: 400px; /* Adjust height for mobile */
-        padding: 20px; /* Add some padding for better visual spacing */
+    .video {
+        width: 100vw;   /* Full width of the viewport */
+        height: 100vh;  /* Full height of the viewport */
     }
 }
 
-/* Very small screen responsiveness (for phones like iPhone SE or similar) */
+/* Very small screen responsiveness */
 @media screen and (max-width: 480px) {
     .heading p {
         font-size: 24px; /* Even smaller font size for very small screens */
@@ -78,10 +68,8 @@ body {
         height: 30px;
     }
 
-    .fr1 {
-        margin: 15px auto; /* Less margin on very small screens */
-        width: 95%;
-        height: 350px; /* Adjust height further for smaller screens */
-        padding: 15px; /* Slightly reduced padding */
+    .video {
+        width: 100vw;   /* Full width of the viewport */
+        height: 100vh;  /* Full height of the viewport */
     }
 }
