@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navaratri</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navaratri</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="landscape-message">
-        <p>Please rotate your device to landscape mode for the best experience.</p>
+  <!-- Orientation Message -->
+  <div id="landscape-message">
+    <p>Please rotate your device to landscape mode for the best experience.</p>
+  </div>
+
+  <!-- Page Content -->
+  <div class="page-wrapper">
+    <!-- Heading -->
+    <div class="heading">
+      <img src="vilak.png" alt="Vilak">
+      <p>Navaratri</p>
+      <img src="vilak.png" alt="Vilak">
     </div>
 
-    <div class="page-wrapper">
-        <div class="heading">
-            <img src="vilak.png" alt="Vilak">
-            <p>Navaratri</p>
-            <img src="vilak.png" alt="Vilak">
-        </div>
-
-        <div class="video-wrapper">
-            <video id="mainVideo" class="video" controls autoplay muted playsinline>
-                <source src="video.mp4" type="video/mp4">
-            </video>
-        </div>
+    <!-- Video Section -->
+    <div class="video-wrapper">
+      <video
+        id="mainVideo"
+        class="video"
+        playsinline
+        controls
+      >
+        <source src="video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
+  </div>
 
-    <script src="s3.js"></script>
+  <script src="s3.js"></script>
 </body>
+</html>
