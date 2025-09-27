@@ -1,19 +1,18 @@
-/* === Global Page Settings === */
-body {
+/* === Reset & Base Styles === */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Agbalumo', sans-serif;
   background-color: rgb(247, 105, 53);
-  overflow-x: hidden; /* Prevent sideways scroll */
-  overflow-y: auto;   /* Allow vertical scroll */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-/* === Page Content Wrapper === */
-.page-wrapper {
-  display: block;
-  padding-top: 80px; /* Space for the fixed heading */
-}
-
-/* === Top Heading Bar === */
+/* === Fixed Header === */
 .heading {
   position: fixed;
   top: 0;
@@ -39,21 +38,25 @@ body {
   height: 45px;
 }
 
+/* === Page Wrapper (Adds space below fixed header) === */
+.page-wrapper {
+  padding-top: 80px;
+}
+
 /* === Video Block === */
 .video-wrapper {
   width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+  padding: 20px;
 }
 
 .video {
   width: 100%;
-  max-height: 100%;
+  height: auto;
+  max-height: none;
   object-fit: contain;
-  display: block;
 }
 
-/* === Landscape Warning Message === */
+/* === Landscape Mode Message === */
 #landscape-message {
   display: none;
   position: fixed;
@@ -71,7 +74,7 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* === Responsive Styles for Tablets === */
+/* === Responsive Tweaks === */
 @media screen and (max-width: 768px) {
   .heading p {
     font-size: 30px;
@@ -87,7 +90,6 @@ body {
   }
 }
 
-/* === Responsive Styles for Phones === */
 @media screen and (max-width: 480px) {
   .heading p {
     font-size: 24px;
