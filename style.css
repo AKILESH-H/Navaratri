@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Agbalumo', sans-serif;
   background-color: rgb(247, 105, 53);
-  overflow: hidden; /* Prevent scrolling */
+  overflow: auto; /* Prevent scrolling */
   height: 100vh;
 }
 
