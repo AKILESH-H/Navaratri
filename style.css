@@ -2,10 +2,12 @@
 body {
     margin: 0;
     background-color: rgb(247, 105, 53);
-    overflow: auto; /* Allow scrolling */
-    height: 100%; /* Ensure the body takes full height */
+    overflow: hidden; /* Prevent scrollbars */
+    height: 100vh; /* Occupy full screen */
     font-family: 'Agbalumo', sans-serif;
 }
+
+
 
 /* Heading styles */
 .heading {
@@ -56,10 +58,15 @@ body {
 
 /* Video styles */
 .video {
+    position: absolute;
+    top: 70px; /* Below the heading */
     width: 100%;
-    height: 700px; /* Let the video size adjust to its container */
-    object-fit: contain; /* Ensure it scales without clipping */
+    height: calc(100vh - 70px); /* Fill remaining space */
+    object-fit: cover; /* Or 'contain' if you prefer full visibility without cropping */
+    z-index: 1;
+    background-color: black; /* Optional: avoids white background during loading */
 }
+
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
