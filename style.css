@@ -74,6 +74,21 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+/* === Logo Section === */
+.logo-wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: transparent; /* Or set a color if needed */
+}
+
+.logo-img {
+  max-width: 200px;
+  width: 95%;
+  height: auto;
+  display: inline-block;
+}
+
 /* === Responsive Tweaks === */
 @media screen and (max-width: 768px) {
   .heading p {
