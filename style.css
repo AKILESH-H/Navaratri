@@ -3,28 +3,29 @@ body {
   margin: 0;
   font-family: 'Agbalumo', sans-serif;
   background-color: rgb(247, 105, 53);
-  overflow: auto; /* Prevent scrolling */
-  height: 100vh;
+  overflow-x: hidden; /* Prevent sideways scroll */
+  overflow-y: auto;   /* Allow vertical scroll */
 }
 
-/* === Wrapper for Entire Page === */
+/* === Page Content Wrapper === */
 .page-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+  display: block;
+  padding-top: 80px; /* Space for the fixed heading */
 }
 
 /* === Top Heading Bar === */
 .heading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(244, 223, 153);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(244, 223, 153);
-  height: 70px;
   border-radius: 0 0 25px 25px;
-  z-index: 10;
-  flex-shrink: 0;
+  z-index: 1000;
 }
 
 .heading p {
@@ -38,18 +39,17 @@ body {
   height: 45px;
 }
 
-/* === Video Container Fills Remaining Space === */
+/* === Video Block === */
 .video-wrapper {
-  flex-grow: 1;
-  position: relative;
-  overflow: hidden;
-  background-color: black;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-height: 100%;
+  object-fit: contain;
   display: block;
 }
 
