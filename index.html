@@ -10,27 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Landscape Orientation Message -->
     <div id="landscape-message">
         <p>Please rotate your device to landscape mode for the best experience.</p>
     </div>
 
-    <!-- Heading Section -->
-    <div class="heading">
-        <img src="vilak.png" alt="Vilak">
-        <p>Navaratri</p>
-        <img src="vilak.png" alt="Vilak">
+    <div class="page-wrapper">
+        <div class="heading">
+            <img src="vilak.png" alt="Vilak">
+            <p>Navaratri</p>
+            <img src="vilak.png" alt="Vilak">
+        </div>
+
+        <div class="video-wrapper">
+            <video id="mainVideo" class="video" controls autoplay muted playsinline>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 
-    <!-- Video Section -->
-    <video id="mainVideo" class="video" controls autoplay muted playsinline>
-        <source src="video.mp4" type="video/mp4">
-    </video>
-
-
-    <!-- External JavaScript -->
     <script src="s3.js"></script>
-
 </body>
-</html>
