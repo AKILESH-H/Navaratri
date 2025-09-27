@@ -34,8 +34,8 @@ body {
 
 /* Message for landscape orientation */
 .landscape-message {
-    display: none;
-    position: absolute;
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed positioning to keep it at the center of the screen */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -44,7 +44,7 @@ body {
     padding: 20px;
     font-size: 20px;
     border-radius: 10px;
-    z-index: 20; /* Above the video */
+    z-index: 20; /* Above the video but below the header */
     text-align: center;
 }
 
@@ -59,9 +59,7 @@ body {
 .video {
     width: 100%;
     height: 700px; /* Let the video size be adjusted to its container */
-    
     object-fit: contain; /* Scale video inside container without clipping */
-
 }
 
 /* Mobile responsiveness */
