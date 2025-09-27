@@ -1,16 +1,18 @@
 // Function to check the orientation and display the message
 function checkOrientation() {
-    if (window.innerHeight > window.innerWidth) {
-        // Show the message in portrait mode
-        document.getElementById("landscape-message").style.display = "block";
+    const isPortrait = window.innerHeight > window.innerWidth;
+    const messageBox = document.getElementById("landscape-message");
+
+    if (isPortrait) {
+        messageBox.style.display = "block";
     } else {
-        // Hide the message in landscape mode
-        document.getElementById("landscape-message").style.display = "none";
+        messageBox.style.display = "none";
     }
 }
 
-// Event listener to detect when orientation changes
-window.addEventListener("orientationchange", checkOrientation);
-
-// Run on initial load to check current orientation
+// Run on page load
 window.addEventListener("load", checkOrientation);
+
+// Listen for changes in orientation or screen size
+window.addEventListener("orientationchange", checkOrientation);
+window.addEventListener("resize", checkOrientation);
