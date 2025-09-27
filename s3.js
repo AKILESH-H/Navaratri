@@ -1,4 +1,4 @@
-// === Orientation Message Logic ===
+// Show or hide orientation message
 function checkOrientation() {
   const isPortrait = window.matchMedia("(orientation: portrait)").matches;
   const messageBox = document.getElementById("landscape-message");
@@ -14,27 +14,25 @@ function checkOrientation() {
   }
 }
 
-// === Setup on DOM Ready ===
+// Auto fullscreen on play
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.getElementById("mainVideo");
 
-  // Go fullscreen on play (user must click the play button)
   video.addEventListener("play", () => {
     if (video.requestFullscreen) {
       video.requestFullscreen();
     } else if (video.webkitRequestFullscreen) {
-      video.webkitRequestFullscreen(); // iOS Safari
+      video.webkitRequestFullscreen(); // Safari
     } else if (video.msRequestFullscreen) {
       video.msRequestFullscreen();
     }
   });
 });
 
-// === Listen for orientation and fullscreen changes ===
+// Trigger orientation checks
 window.addEventListener("load", checkOrientation);
 window.addEventListener("resize", checkOrientation);
 window.addEventListener("orientationchange", checkOrientation);
 document.addEventListener("fullscreenchange", checkOrientation);
 document.addEventListener("webkitfullscreenchange", checkOrientation);
 document.addEventListener("mozfullscreenchange", checkOrientation);
-document.addEventListener("msfullscreenchange", checkOrientation);

@@ -12,7 +12,7 @@ body {
   overflow-y: auto;
 }
 
-/* === Fixed Header === */
+/* === Fixed Top Heading === */
 .heading {
   position: fixed;
   top: 0;
@@ -38,25 +38,26 @@ body {
   height: 45px;
 }
 
-/* === Page Wrapper (Adds space below fixed header) === */
+/* === Page Content Wrapper === */
 .page-wrapper {
-  padding-top: 80px;
+  padding-top: 80px; /* Makes room for fixed heading */
 }
 
-/* === Video Block === */
+/* === Fullscreen Video Section === */
 .video-wrapper {
   width: 100%;
-  padding: 20px;
+  height: calc(100vh - 80px); /* Full viewport height minus header */
+  overflow: hidden;
 }
 
 .video {
   width: 100%;
-  height: auto;
-  max-height: none;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover; /* Fill the container */
+  display: block;
 }
 
-/* === Landscape Mode Message === */
+/* === Orientation Message === */
 #landscape-message {
   display: none;
   position: fixed;
@@ -74,22 +75,7 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* === Logo Section === */
-.logo-wrapper {
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
-  background-color: transparent; /* Or set a color if needed */
-}
-
-.logo-img {
-  max-width: 200px;
-  width: 95%;
-  height: auto;
-  display: inline-block;
-}
-
-/* === Responsive Tweaks === */
+/* === Responsive Styles === */
 @media screen and (max-width: 768px) {
   .heading p {
     font-size: 30px;

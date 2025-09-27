@@ -10,30 +10,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Landscape Warning -->
+
+  <!-- Orientation Message -->
   <div id="landscape-message">
     <p>Please rotate your device to landscape mode for the best experience.</p>
   </div>
 
   <div class="page-wrapper">
-    <!-- Fixed Header -->
+    <!-- Heading -->
     <div class="heading">
       <img src="vilak.png" alt="Vilak">
       <p>Navaratri</p>
       <img src="vilak.png" alt="Vilak">
     </div>
 
-    <!-- Single Video Block -->
+    <!-- Fullscreen Video -->
     <div class="video-wrapper">
-      <video id="mainVideo" class="video" controls playsinline>
+      <video
+        id="mainVideo"
+        class="video"
+        controls
+        playsinline
+      >
         <source src="video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
     </div>
   </div>
-  <!-- Logo Image Below Video -->
-<div class="logo-wrapper">
-    <img src="logo.png" alt="Logo" class="logo-img">
-</div>
 
-<script src="s3.js"></script>
+  <script src="s3.js"></script>
 </body>
+</html>
